@@ -1,8 +1,13 @@
-## Course Assignments
+BCB546 UNIX_Assignment
 
 A description of files within this folder:
 
-* `UNIX_Assignment.md` and `UNIX_Assignment.pdf`: Instructions for the assignment
-* `UNIX_Assignment_Template.md` and `UNIX_Assignment_Template.pdf`: An example of what your Markdown file should look like when you submit your assignment, including some Markdown syntax that should be helpful for you. The pdf shows how this file is rendered using a tool such as "MacDown"
-* The two files `fang_et_al_genotypes.txt` and `snp_positions.txt` are data files you will be reformatting for the assignment
-* The `transpose.awk` script will be needed to transpose the data (see instructions in `UNIX_Assignment.md`)
+* `Maize_ascend`: Contains files named Maize_chr1.txt to Maize_chr10.txt which are 10 files (1 for each chromosome) with SNPs ordered based on increasing position values and with missing data encoded by this symbol: ?. This folder also contains Maize_chrm.txt and Maize_chru.txt which are files with all SNPs with multiple and unknown positions in the genome respectively.
+* 
+* `Maize_descend`: Contains files named Maize_chrd1.txt to Maize_chrd10.txt which are 10 files (1 for each chromosome) with SNPs ordered based on decreasing position values and with missing data encoded by this symbol: -
+* 
+* `Teosinte_ascend`: Contains files named Teosinte_chr1.txt to Teosinte_chr10.txt which are 10 files (1 for each chromosome) with SNPs ordered based on increasing position values and with missing data encoded by this symbol: ?. This folder also contains Teosinte_chrdm.txt and Teosinte_chrdu.txt which are files with all SNPs with multiple and unknown positions in the genome respectively.
+* 
+* `Teosinte_descend`: Contains files named Teosinte_chrd1.txt to Teosinte_chrd10.txt which are 10 files (1 for each chromosome) with SNPs ordered based on decreasing position values and with missing data encoded by this symbol: -
+* 
+* `UNIX_Assignment_Codes_Description`: This file is a syntax of codes used to inspect and process assignment files to generate the files submitted in this folder.  
