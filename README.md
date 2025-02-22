@@ -10,4 +10,4 @@ A description of files within this folder:
 * 
 * `Teosinte_descend`: Contains files named Teosinte_chrd1.txt to Teosinte_chrd10.txt which are 10 files (1 for each chromosome) with SNPs ordered based on decreasing position values and with missing data encoded by this symbol: -
 * 
-* `UNIX_Assignment_Codes_Description`: This file is a syntax of codes used to inspect and process assignment files to generate the files submitted in this folder.  
+* `UNIX_Assignment_Script`: This file is a syntax and description of codes used to inspect and process assignment files, to generate the files submitted in this folder.  
