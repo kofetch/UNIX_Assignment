@@ -93,6 +93,10 @@ cat Maize_chr7.txt
 cat Maize_chru.txt
 mkdir Maize_ascend
 mv Maize_chr1.txt Maize_chr2.txt Maize_chr3.txt Maize_chr4.txt Maize_chr5.txt Maize_chr6.txt Maize_chr7.txt Maize_chr8.txt Maize_chr9.txt Maize_chr10.txt Maize_chrm.txt Maize_chru.txt Maize_ascend
+sed 's/?/-/g' Maize_sorted.txt > Maize_hyphen.txt
+cat Maize_hyphen.txt
+wc Maize_hyphen.txt
+awk -F "\t" '{print NF; exit}' Maize_hyphen.txt
 (head -n 1 Maize_hyphen.txt && tail -n +2 Maize_hyphen.txt | sort -k3,3nr) > Maize_descend.txt
 for i in {1..10}; do
     { head -n 1 Maize_descend.txt && awk -v chr="$i" '$2 == chr' Maize_descend.txt; } > "Maize_chrd${i}.txt"
@@ -137,14 +141,18 @@ Here is my brief description of what this code does
 93.	Displays the contents of Maize_chru.txt.
 94.	Creates a directory called Maize_ascend.
 95.	Moves the Maize chromosome files into the Maize_ascend directory.
-96.	Sorts Maize_hyphen.txt in descending order based on the 3rd column and saves to Maize_descend.txt.
-96-98.	Loops through descending chromosomes 1-10, extracts matching rows from Maize_descend.txt, and saves to separate files.
-99.	Prints the total number of columns of all files
-100.	Displays the contents of Maize_chrd1.txt.
-101.	Displays the contents of Maize_chrd5.txt.
-102.	Displays the contents of Maize_chrd10.txt.
-103.	Creates a directory called Maize_descednd.
-104.	Moves the descending chromosome files into the Maize_descend directory. 
+96. Replaces all occurrences of “?” with “-“ in Maize_sorted.txt and saves the output to Maize_hyphen.txt. 
+97. Displays the contents of Maize_hyphen.txt. 
+98. Counts and displays the number of lines, words, and bytes in Maize_hyphen.txt. 
+99. Prints the number of tab-separated columns in the first row of  Maize_hyphen.txt. 
+100. Sorts Maize_hyphen.txt in descending order based on the 3rd column and saves to Maize_descend.txt.
+101-102. Loops through descending chromosomes 1-10, extracts matching rows from Maize_descend.txt, and saves to separate files.
+103. Prints the total number of columns of all files
+104. Displays the contents of Maize_chrd1.txt.
+105. Displays the contents of Maize_chrd5.txt.
+106. Displays the contents of Maize_chrd10.txt.
+107. Creates a directory called Maize_descednd.
+108. Moves the descending chromosome files into the Maize_descend directory. 
 
 
 ###Teosinte Data
